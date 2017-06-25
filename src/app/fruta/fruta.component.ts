@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class FrutaComponent{
 	public nombre_component = 'Componente de fruta';
 	public listado_frutas = 'Naranja, Manzana, Pera y Sandia';
+
+	public nombre:string = "Camilo Ramirez";
+	public edad:number = 21;
+	public mayorDeEdad:boolean = true;
+	public trabajos:Array<string> = ['Carpintero', 'Ingeniero', 'Fisico']
+	
 }
