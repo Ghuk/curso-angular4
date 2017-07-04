@@ -9,9 +9,11 @@ import { Empleado } from './empleado';
 
 export class EmpleadoComponent{
 	public titulo = 'Componente Empleados:';
+
 	public empleado:Empleado;
 	public trabajadores:Array<Empleado>;
 	public trabajador_externo:boolean;
+	public color:string;
 
 
 	constructor(){
@@ -23,6 +25,7 @@ export class EmpleadoComponent{
 		];
 
 		this.trabajador_externo = true;
+		this.color = 'green';
 	}
 
 	ngOnInit(){
