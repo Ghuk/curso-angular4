@@ -92,7 +92,10 @@
 <button (click)="logColorSeleccionado()">Imprimir color</button>
 <input type="text" [(ngModel)]="color_seleccionado"/>
 
-<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '2px solid green'">
+<pre 
+	[style.border]="color_seleccionado == 'red' ? '5px solid black' : '2px solid green'"
+	[class.bordeAzul]="color_seleccionado == 'blue'"
+	>
 	Color elegido:
 	{{color_seleccionado}}
 </pre>
