@@ -86,3 +86,21 @@
 			>Es de color verde
 	</li>
 </ul>
+
+<hr/>
+<h3>Selector de colores</h3>
+<button (click)="logColorSeleccionado()">Imprimir color</button>
+<input type="text" [(ngModel)]="color_seleccionado"/>
+<pre>
+	Color elegido:
+	{{color_seleccionado}}
+</pre>
+<div [ngStyle]="{
+		'background':color_seleccionado,
+		'width':'200px',
+		'height':'200px',
+		'float':'right',
+		'margin-right':'69%'
+	}"
+></div>
+<div style="clear:both"></div>
