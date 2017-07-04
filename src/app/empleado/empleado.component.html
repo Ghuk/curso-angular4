@@ -91,10 +91,14 @@
 <h3>Selector de colores</h3>
 <button (click)="logColorSeleccionado()">Imprimir color</button>
 <input type="text" [(ngModel)]="color_seleccionado"/>
-
+<!--[ngClass]="['letraGrande']" > Pertenece al PRE-->
 <pre 
 	[style.border]="color_seleccionado == 'red' ? '5px solid black' : '2px solid green'"
-	[class.bordeAzul]="color_seleccionado == 'blue'"
+	
+	[ngClass]="{
+			bordeAzul : color_seleccionado == 'blue',
+			fondoVerde: color_seleccionado == 'green'
+		}"
 	>
 	Color elegido:
 	{{color_seleccionado}}
