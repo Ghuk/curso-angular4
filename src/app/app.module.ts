@@ -9,13 +9,16 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { ContactoComponent} from './contacto/contacto.component';
 import { HomeComponent } from './home/home.component';
 
+import { ConversorPipe} from './pipes/conversor.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     EmpleadoComponent,
     FrutaComponent,
     ContactoComponent,
-    HomeComponent
+    HomeComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
