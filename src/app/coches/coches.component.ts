@@ -16,7 +16,6 @@ export class CochesComponent{
 
 	onSubmit(){
 		console.log(this.coche);
-		
 	}
 
 }
