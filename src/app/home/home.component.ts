@@ -11,7 +11,9 @@ export class HomeComponent{
 	public titulo = "Página principal";
 	public listado_ropa: Array<string>;
 	public prenda_a_guardar:string;
-	public fecha;
+	
+	public fecha
+	public nombre = "JuAn lOpEz pOpo";
 
 	constructor(
 		private _ropaService: RopaService

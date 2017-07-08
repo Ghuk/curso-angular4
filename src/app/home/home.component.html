@@ -3,8 +3,9 @@
 <br/>
 
 {{fecha| date: 'dd-MM-yyyy'}}
-<p>{{fecha| date: 'fullDate'}}</p>
+<p>{{fecha| date: 'fullDate' | uppercase | lowercase}}</p>
 <p>{{fecha}}</p>
+<p>{{nombre | uppercase}}</p>
 <br/>
 <input type="text" [(ngModel)]="prenda_a_guardar">
 <button (click)="guardarPrenda()">Añadir prenda</button>
