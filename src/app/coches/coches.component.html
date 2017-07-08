@@ -15,7 +15,7 @@
 </style>
 
 <div>
-<form #formCoche = "ngForm" (ngSubmit)="onSubmit()" >
+<form #formCoche = "ngForm" (ngSubmit)="onSubmit(); formCoche.reset()" >
 	<p>
 	<label>Nombre:</label>
 	<input type = "text" name = "nombre" #nombre="ngModel" [(ngModel)] = 'coche.nombre' required>
@@ -38,7 +38,7 @@
 	</span>
 	</p>
 
-	<input type="submit" value="Guardar" [disabled] = "!formCoche.form.valid">
+	<input type="submit" value="Guardar"   [disabled] = "!formCoche.form.valid">
 </form>
 </div>
 
