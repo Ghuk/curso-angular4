@@ -1,6 +1,21 @@
 <h1>Componente de coches</h1>
+<style>
+	form{
+		width:200px;
+		font-size:16px;
+		padding-right:80px;
+	}
+	input[type = "text"], span{
+		display:block;
+		width:100%;
+	}
+	div{
+		float: left;
+	}
+</style>
 
-<form #formCoche = "ngForm" (ngSubmit)="onSubmit()">
+<div>
+<form #formCoche = "ngForm" (ngSubmit)="onSubmit()" >
 	<p>
 	<label>Nombre:</label>
 	<input type = "text" name = "nombre" #nombre="ngModel" [(ngModel)] = 'coche.nombre' required>
@@ -23,5 +38,13 @@
 	</span>
 	</p>
 
-	<input type="submit" value="Guardar">
+	<input type="submit" value="Guardar" [disabled] = "!formCoche.form.valid">
 </form>
+</div>
+
+<h4>Listado de coches</h4>
+<ul>
+	<li *ngFor="let coche of coches">
+		{{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}
+	</li>
+</ul>
