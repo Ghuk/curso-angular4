@@ -25,7 +25,7 @@
 	</p>
 	<p>
 	<label>Caballaje:</label>
-	<input type = "text" name="caballaje" #caballaje="ngModel" [(ngModel)]='coche.caballaje' required pattern="[0-9]+"> 
+	<input type = "text" name="caballaje" #caballaje="ngModel" [(ngModel)]='coche.caballaje' required pattern="[0-9]+">
 	<span *ngIf="caballaje.touched && !caballaje.valid">
 		El caballaje del coche es incorrecto
 	</span>
@@ -48,3 +48,13 @@
 		{{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}
 	</li>
 </ul>
+
+<div class="listado">
+	<h4>Listado de articulos</h4>
+	<ul *ngIf="articulos">
+		<li *ngFor="let articulo of articulos">
+			 	{{articulo.id}} - {{articulo.title}}
+		</li>
+	</ul>
+	<span *ngIf="!articulos">Cargando listado...</span>
+</div>
