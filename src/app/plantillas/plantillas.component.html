@@ -1,10 +1,12 @@
 <h4>{{titulo}}</h4>
 
 
-<div *ngIf="administrador; else noAdmin">
+<div *ngIf="administrador; then admin else noAdmin"></div>
+
+<ng-template #admin>
       <button (click)="cambiar(false)">Cambiar</button>
       <strong style="background:yellow">Eres el administrador de la WebApp</strong>
-</div>
+</ng-template>
 
 <ng-template #noAdmin>
       <button (click)="cambiar(true)">Cambiar</button>
