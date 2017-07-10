@@ -13,4 +13,8 @@ export class PlantillasComponent{
   }
 
   ngOnInit() {}
+
+  cambiar(value){
+    this.administrador = value;
+  }
 }
